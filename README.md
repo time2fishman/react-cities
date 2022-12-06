@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+## React Cities
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Convert the following [CodePen](https://codepen.io/jkeohan/pen/850f8454693590e9772f8d0f6c2f44c8) into a React app. Additionally, your app should have a form for the user to add their own image.
 
-## Available Scripts
+1. Create the following Components and organize based on the below hierarchy:
+    - App
+      - Form (this is not in the CodePen)
+      - SmallImage
+      - LargeImage
 
-In the project directory, you can run:
+1. Make a state variable in App that holds an array of image urls, call it `images`. Use the `images` array to generate a list of SmallImage components. Build out the SmallImage component, so it displays the image passed to it through a prop called `image`.
 
-### `npm start`
+1. Make a state variable in App that holds the current image url, call it `currentImage`. Build out the LargeImage component, so it displays the `currentImage`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Add an onClick event to SmallImage that updates `currentImage` to match the SmallImage that is clicked. You will need to pass `currentImage`'s update function to each SmallImage component through props.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Build out the Form component with a form that has a text input.
 
-### `npm test`
+1. Make a state variable in Form to track what the user types in the text input. Add an onChange function to the input to update that state variable.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Build a function in App that will handle when the form submits, call it `handleSubmit`. `handleSubmit` should add an image to the `images` array. Pass `handleSubmit` to the Form component and connect it to the form's onSubmit event.
