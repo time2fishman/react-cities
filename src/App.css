@@ -5,7 +5,9 @@ body {
   font-family: Helvetica, Arial, Verdana;
 }
 
-h1 {
+h1,
+h2,
+form {
   color: #888888;
   text-align: center;
 }

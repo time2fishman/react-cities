@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css';
+import Form from './components/Form';
 import LargeImage from './components/LargeImage';
 import SmallImage from './components/SmallImage';
 
@@ -78,6 +79,7 @@ function App() {
         })}
         <LargeImage currentImage={currentImage} />
       </div>
+      <Form />
     </div>
   );
 }
