@@ -1,6 +1,5 @@
-import React from 'react';
-
 const LargeImage = (props) => {
+    // JSX
     return (
         <img
             className={props.currentImage.class}

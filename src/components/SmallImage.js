@@ -1,6 +1,5 @@
-import React from 'react';
-
 const SmallImage = (props) => {
+    // JSX
     if (props.image.id !== 'bigimage') {
         return (
             <img
